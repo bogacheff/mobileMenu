@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "title": "Diablo Pizza",
+    "subtitle": "Spicy chorizo with hot jalapeno peppers",
+    "description": "A fiery combination of spicy chorizo, hot jalapeno peppers, and barbecue sauce.",
+    "categoryId": 2,
+    "image": "images/pizza/diablo.png",
+    "prices": [
+      { "title": "Small", "value": 8.99 },
+      { "title": "Medium", "value": 12.99 },
+      { "title": "Large", "value": 16.99 }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Cheeseburger",
+    "subtitle": "Classic burger with melted cheese",
+    "description": "Juicy grilled beef patty topped with melted cheese, lettuce, tomato, and our signature sauce.",
+    "categoryId": 1,
+    "image": "images/burgers/cheeseburger.png",
+    "prices": [
+      { "title": "Single", "value": 5.99 },
+      { "title": "Double", "value": 7.99 }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Chocolate Donut",
+    "subtitle": "Sweet chocolate glazed donut",
+    "description": "Soft and fluffy donut coated in rich chocolate glaze, perfect for dessert lovers.",
+    "categoryId": 3,
+    "image": "images/desserts/chocolate-donut.png",
+    "prices": [
+      { "title": "Regular", "value": 2.99 },
+      { "title": "Pack of 6", "value": 14.99 }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Cola Drink",
+    "subtitle": "Refreshing cola with ice",
+    "description": "Cool and refreshing cola drink served with ice. Perfect for any meal.",
+    "categoryId": 4,
+    "image": "images/drinks/cola.png",
+    "prices": [
+      { "title": "Small", "value": 1.99 },
+      { "title": "Large", "value": 2.99 }
+    ]
+  }
+]

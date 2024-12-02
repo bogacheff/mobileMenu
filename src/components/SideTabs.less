@@ -1,0 +1,79 @@
+.side-tabs-panel {
+  --f7-panel-left-width: calc(64px + var(--f7-safe-area-left));
+  background: var(--f7-theme-color);
+}
+
+.side-tab-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 100%;
+  margin-left: var(--f7-safe-area-left);
+}
+
+.side-tab-link {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  opacity: 0.35;
+  .ios & {
+    color: #fff;
+  }
+  .md & {
+    color: var(--f7-md-on-primary);
+  }
+  svg {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    width: 9px;
+    height: 64px;
+    margin-top: -32px;
+    transition-duration: 300ms;
+    transform: scaleX(0);
+    transform-origin: left center;
+    fill: var(--f7-theme-color);
+    z-index: 100;
+  }
+}
+.side-tab-link-active {
+  opacity: 1;
+}
+.side-tab-link-active svg {
+  transform: scaleX(1);
+}
+.side-tab-link + .side-tab-link {
+  margin-top: 32px;
+}
+@media (min-width: 768px) {
+  .views > .toolbar.tabbar {
+    display: none;
+  }
+  .toolbar-bottom ~ * .fab-center-bottom {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .views {
+    --f7-page-title-padding-left: 64px;
+    --f7-page-title-padding-right: 64px;
+    --f7-block-padding-horizontal: 64px;
+    --f7-list-inset-side-margin: 64px;
+    --f7-block-inset-side-margin: 64px;
+    --f7-navbar-inner-padding-right: 64px;
+    --f7-navbar-inner-padding-left: 64px;
+    .ios & .searchbar {
+      --f7-searchbar-inner-padding-right: 64px;
+      --f7-searchbar-inner-padding-left: 64px;
+    }
+    .md & .searchbar {
+      margin-left: 64px !important;
+      margin-right: 64px !important;
+    }
+  }
+}

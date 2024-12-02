@@ -1,0 +1,35 @@
+.item-cards {
+  &-scrollable {
+    overflow: auto;
+    display: flex;
+    padding-bottom: 16px;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+      opacity: 0;
+    }
+    .item-card + .item-card {
+      margin-left: 16px;
+    }
+  }
+  @media (max-width: 399px) {
+    &:not(&-scrollable) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      .item-card {
+        width: auto;
+      }
+    }
+  }
+  @media (min-width: 400px) {
+    &:not(&-scrollable) {
+      display: flex;
+      flex-wrap: wrap;
+      .item-card {
+        margin-right: 16px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Burger",
+    "image": "images/burgers/bigmac.png"
+  },
+  {
+    "id": 2,
+    "title": "Pizza",
+    "image": "images/pizza/mix.png"
+  },
+  {
+    "id": 3,
+    "title": "Desserts",
+    "image": "images/desserts/chocolate-donut.png"
+  },
+  {
+    "id": 4,
+    "title": "Drinks",
+    "image": "images/drinks/pepsi.png"
+  }
+]

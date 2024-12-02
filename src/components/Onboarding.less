@@ -1,0 +1,119 @@
+.onboarding {
+  &.popup {
+    background-color: #fff;
+    .dark & {
+      background-color: #000;
+    }
+    background-image: url(../../images/pattern.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &::before {
+    left: -50vmax;
+    top: -50vmax;
+  }
+  &::after {
+    right: -50vmax;
+    bottom: -50vmax;
+  }
+  swiper-slide {
+    display: flex;
+    flex-direction: column;
+  }
+  .dark & {
+    --swiper-pagination-bullet-inactive-color: #fff;
+  }
+  swiper-container {
+    height: 100%;
+    --swiper-pagination-bottom: calc(10px + var(--f7-safe-area-bottom));
+  }
+  &-images {
+    height: 50%;
+    position: relative;
+    img {
+      position: absolute;
+      object-fit: contain;
+      object-position: center;
+    }
+    img:nth-child(1) {
+      width: 40%;
+      height: 40%;
+      left: 10%;
+      top: 10%;
+    }
+    img:nth-child(2) {
+      width: 40%;
+      height: 40%;
+      right: 10%;
+      bottom: 10%;
+    }
+    img:nth-child(3) {
+      width: 40%;
+      height: 40%;
+      right: 5%;
+      top: 5%;
+    }
+  }
+
+  &-content {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--f7-block-strong-bg-color);
+    margin-top: auto;
+    color: var(--f7-text-color);
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      bottom: 100%;
+      height: 100px;
+      margin-bottom: -50px;
+      background-image: radial-gradient(
+        var(--f7-block-strong-bg-color) 71%,
+        transparent 70%
+      );
+      z-index: 1000;
+    }
+    > * {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+  }
+  &-image {
+    img {
+      width: 320px;
+      height: auto;
+    }
+  }
+  &-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 32px;
+    line-height: 1.2;
+  }
+  &-text {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 32px;
+    color: var(--light-color);
+  }
+  &-next {
+    --f7-button-padding-horizontal: 16px;
+    .button {
+      width: 192px;
+    }
+  }
+}

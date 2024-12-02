@@ -1,0 +1,67 @@
+/* Your app custom styles here */
+:root {
+  --f7-searchbar-border-color: transparent;
+}
+.ios:not(.dark) {
+  --f7-page-bg-color: rgb(255, 255, 255);
+  --f7-bars-bg-color: #fff;
+  --f7-bars-bg-color-rgb: 255, 255, 255;
+  --f7-bars-border-color: transparent;
+}
+:root.dark {
+  --f7-bars-border-color: transparent;
+}
+.ios {
+  .searchbar {
+    overflow: hidden;
+    background-color: transparent;
+    --f7-searchbar-input-height: 36px;
+    --f7-searchbar-inner-padding-left: 16px;
+    --f7-searchbar-inner-padding-right: 16px;
+    --f7-searchbar-in-page-content-input-border-radius: 8px;
+  }
+}
+.md {
+  --f7-page-title-text-color: var(--f7-md-on-surface);
+  &:not(.dark) {
+    --f7-searchbar-input-bg-color: rgba(0, 0, 0, 0.1);
+  }
+  .searchbar {
+    margin-left: 8px !important;
+    margin-right: 8px !important;
+  }
+  .panel-cover {
+    overflow: visible;
+  }
+}
+.fab {
+  > a {
+    box-shadow: 0px 4px 10px rgba(var(--f7-theme-color-rgb), 0.5);
+  }
+  > a i {
+    font-size: 24px;
+  }
+  .fab-text {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+  span + span {
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+    font-size: 125%;
+    &::before {
+      content: '';
+      width: 1px;
+      height: 1em;
+      background: #fff;
+      flex-shrink: 0;
+      margin-right: 16px;
+      opacity: 0.5;
+    }
+  }
+  ~ .page-content {
+    --f7-page-content-extra-padding-bottom: 84px;
+  }
+}
